@@ -1,0 +1,83 @@
+<section class="home" id="Home">
+    <div class="title">
+        <h3>Hello, I am Aness</h3>
+        <p>a front-developer, on my journey to become a full-stack developer and an Ai Developer,i would be happy to assist you building your desired app rapidly and smoothly</p>
+        <span class="contact">
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-upwork"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+            <a href=""><i class="fa-solid fa-m gmail"></i></a>
+        </span>
+        <a href="#Projects">Projects <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div> 
+</section>
+<section class="projects-section" id="Projects">
+    <h1>projects</h1>
+    <div class="projects">
+        <div class="container" *ngFor="let p of Projects">
+            <div class="image">
+                <img [src]="p.img" alt="">
+            </div>
+            <div class="informations">
+                <h3>{{p.title}} </h3>
+                <p>{{p.description}} </p>
+                <div class="tags">
+                    <p class="technologies" *ngFor="let item of p.technologies">{{item}} </p>
+                </div>
+                <div class="url">
+                    <a [href]="p.url" target="_blank" rel="noopener noreferrer">Open Project <i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about" id="About">
+    <h1>About</h1>
+    <div class="about-content">
+        <img src="profile.jpg" alt="">
+        <p>i'm aness i'm a front-end and Javascrimt developer a telecommunication systems engineering student , i'm passionate about technology and AI,</p>
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="hard-skills">
+                <div class="skill-title">
+                    Hard Skills
+                </div>
+                <div class="content">
+                    <p>javascript (advanced)</p>
+                    <p>TypeScript (advanced)</p>
+                    <p>Angular (advanced) </p>
+                    <p>express.js (intermediate) </p>
+                    <p>HTML & CSS (advanced)</p>
+                    <p>python (advanced)</p>
+                    <p>java (basic)</p>
+                    <p>C++ (Basic)</p>
+                    <p>My SQL</p>
+                    <p>MongoDB</p>
+                    
+                    
+                </div>
+            </div>
+            <div class="soft-skills">
+                <div class="skill-title">
+                    Soft Skills
+                </div>
+                <div class="content">
+                    <p>Arabic (Native)</p>
+                    <p>English (profecient) </p>
+                    <p>French (advancec) </p>
+                    <p>Russian (Beginner)</p>
+                    <p>Effective communication </p>
+                    <p>Active listening</p>
+                    <p>Teamwork</p>
+                    <p>Conflict Resolution</p>
+                    <p>Flexibility </p>
+                    <p>Continuous learning</p>
+                    <p>Time management </p>
+                    <p>organization</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
