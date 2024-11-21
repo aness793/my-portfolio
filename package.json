@@ -6,8 +6,8 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "cd src && ng serve",
+    "build": "  cd src && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:main-portfolio": "node dist/main-portfolio/server/server.mjs"
