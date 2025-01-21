@@ -205,36 +205,58 @@ section > h1::after {
     border-radius: 2rem;
 }
 .skills {
-    margin: 0 auto;
+    margin: 0 ;
     display: grid;
-    width: clamp(20rem,90%,100svw);
-    height: clamp(50rem,50rem,50rem);
+    width: clamp(20rem,100%,100svw);
+    height: clamp(10rem,20em,100rem);
     grid-template-columns: 1fr 1fr;
-    padding: 1rem .5rem;
+    padding: 1rem 2rem;
     padding-bottom: 0;
+
+}
+.skills h2 {
+    display: flex;
+    justify-content: center;
 }
 .hard-skills ,.soft-skills {
     display: grid;
-    grid-template-rows: 7rem 1fr;
+    grid-template-rows: 2rem 1fr;
 }
 .skills .skill-title {
     grid-row: 1/2;
     display: flex;
     align-items: center;
-    font-size: clamp(.8rem,2rem,2rem);
+    font-size: 2rem;
     justify-content: center;
     font-weight: 700;
 }
+.skill-title p {
+    font-size: 2rem;
+}
 .skills .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.2rem;
+    display:flex;
+    gap:.5rem;
+    flex-wrap: wrap;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin-inline:.2rem ;
+    align-self: center;
+    
 }
 
 .skills .content p {
-    color: var(--main);
+    color: var(--bg);
+    background-color: var(--main);
+    padding: .6rem .5rem;
+    border-radius: .5rem;
+    flex: none; /* Prevent flex items from growing or shrinking */ 
+    
+    margin:0;
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 600;
 
 }
 .hard-skills {
@@ -294,7 +316,7 @@ footer * {
 }
 .social-media div {
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
     align-items: center;
     flex-wrap: wrap;
     font-size: 1.6rem;
@@ -307,10 +329,23 @@ footer * {
 
 
 @media screen and (max-width:870px){
+    footer {
+        height: 15rem;
+    }
     .skills .content p {
-        font-size: clamp(.6rem,1rem,1.2rem);
-        width: 9ch;
+        font-size: .6rem;
+        font-weight: 500;
         text-align: center;
+        padding: .4rem;
+    }
+    .skills {
+        height: 15rem;
+    }
+    .skill-title p {
+        font-size: 1.6rem;
+    }
+    .about h2 {
+        font-size: 1.6rem;
     }
     .soft-skills .content p, .hard-skills .content p{
         justify-self: center;
@@ -331,11 +366,20 @@ footer * {
     }
 }
 @media screen and (max-width:670px) {
-    .skills .content p  {
-        font-size: .8rem;
+    .skills .content p {
+        font-size: .5rem;
+        font-weight: 500;
+        text-align: center;
+        padding: .4rem;
     }
-    .skills .skill-title {
-        font-size: 1.2rem;
+    .skills {
+        height: 15rem;
+    }
+    .skill-title p {
+        font-size: 1.6rem;
+    }
+    .about h2 {
+        font-size: 1.6rem;
     }
     .social-media div {
         font-size: 1.2rem;
@@ -360,13 +404,39 @@ footer * {
 }
 @media  screen and (max-width:477px) {
     .skills .content p {
-        font-size: .7rem;
+        font-size: .3rem;
+        font-weight: 500;
+        text-align: center;
+        padding: .2rem;
+        border-radius: .3rem;
     }
-}
-@media  screen and (max-width:477px) {
+    .skills {
+        height: fit-content;
+        padding-block: .2rem;
+        padding-inline: .1rem;
+    }
+    .skills .content {
+        justify-content: start;
+        gap: .2rem;
+        margin-inline: .1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .skill-title p {
+        font-size: 1rem;
+    }
+    .about h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
     .skills .content p {
-        font-size: .6rem;
+        font-size: .4rem;
         align-self: center;
+        padding: .2rem;
+        justify-self: center;
+        width: 4rem;
+        text-align: center;
+        justify-content: center;
     }   
     .social-media div {
         font-size: 1rem;
@@ -394,8 +464,32 @@ footer * {
 
 }
 @media  screen and (max-width:300px) {
+    footer {
+        height: 10rem;
+    }
+    .info {
+        gap: .2rem;
+    }
+    .skills .content p {
+        font-size: .4rem;
+        font-weight: 400;
+        text-align: center;
+        padding: .2rem;
+        width: 3rem;
+    }
+    .skills {
+        height: 15rem;
+        max-width:250px;
+        min-width: 100px;
+    }
+    .skill-title p {
+        font-size: 1rem;
+    }
+    .about h2 {
+        font-size: 1rem;
+    }
     .social-media div {
-        font-size: .8rem;
+        font-size: .6rem;
         gap:.5rem;
         padding-top: 0;
     }
@@ -413,4 +507,31 @@ footer * {
     .copyright {
         font-size: .6rem;
     }
+    .footer-content {
+        grid-template-columns: 60% 40%;
+        padding: .2rem;
+    }
+    .info * {
+        font-size: .8rem;
+        gap: .8rem;
+        
+    }
+    .info > span {
+        margin-block: .4rem;
+    }
+    .social-media  div {
+        height: fit-content;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .social-media div a i  {
+        margin-top: 1rem;
+        font-size: 1rem;
+
+    }
+    .copyright  {
+        font-size: .4rem;
+    }
+  
 }
