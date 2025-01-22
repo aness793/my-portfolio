@@ -175,6 +175,7 @@ section > h1::after {
 
 }
 .about-content img {
+    width: 10rem;
     height: 10rem;
     border-radius: 50%;
     object-fit: cover;
@@ -246,8 +247,8 @@ section > h1::after {
 }
 
 .skills .content p {
-    color: var(--bg);
-    background-color: var(--main);
+    color: var(--main);
+    border: 2px solid var(--main);
     padding: .6rem .5rem;
     border-radius: .5rem;
     flex: none; /* Prevent flex items from growing or shrinking */ 
@@ -373,7 +374,7 @@ footer * {
         padding: .4rem;
     }
     .skills {
-        height: 15rem;
+        height: 20rem;
     }
     .skill-title p {
         font-size: 1.6rem;
@@ -460,10 +461,56 @@ footer * {
     .info {
         padding-left: 5rem;
     }
-    
+    .about-content > p {
+        font-size: 1rem ;
+        max-width: 40ch;
+    }
+
+    .title h3 {
+        font-size: 2.4rem;
+    }
+    .title p {
+        /* color:var(--second); */
+        max-width: 60ch ;
+        font-size: 1rem;
+        
+    }
+    .title {
+        padding: 0;
+        margin-inline:.2rem;
+        height: clamp(10svh,70svh,89svh);
+    }
+    .contact {
+        gap:1rem;
+    }
+    .contact a * {
+        font-size: 1.5rem;
+    }
 
 }
 @media  screen and (max-width:300px) {
+    .about-content > p {
+        font-size: .8rem ;
+        max-width: 40ch;
+        margin-inline: .2rem;
+    }
+    .title {
+        padding: 0;
+        margin-inline:.2rem;
+        height: clamp(10svh,60svh,89svh);
+    }
+    .title h3 {
+        font-size: 2rem;
+    }
+    .title p {
+        /* color:var(--second); */
+        max-width: 60ch ;
+        font-size: .8rem;
+        
+    }
+    .contact a * {
+        font-size: 1.2rem;
+    }
     footer {
         height: 10rem;
     }
@@ -482,6 +529,7 @@ footer * {
         max-width:250px;
         min-width: 100px;
     }
+
     .skill-title p {
         font-size: 1rem;
     }
